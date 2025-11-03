@@ -14,4 +14,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>gitlab-maven</id>
+            <!--suppress UnresolvedMavenProperty -->
+            <url>${env.CI_API_V4_URL}/projects/${env.CI_PROJECT_ID}/packages/maven</url>
+        </repository>
+    </distributionManagement>
+
 </project>
