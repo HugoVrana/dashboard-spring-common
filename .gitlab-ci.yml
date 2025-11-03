@@ -2,40 +2,56 @@ stages:
   - build
   - publish
 
+# Pick ONE: 17 or 21. (Uncomment the one you need)
+image: maven:3.9.9-eclipse-temurin-17
+# image: maven:3.9.9-eclipse-temurin-21
+
 variables:
-  MAVEN_CLI_OPTS: "-B -Dmaven.test.skip=true"
+  MAVEN_CLI_OPTS: "-B -DskipTests"
+  # Speeds up Maven + makes logs smaller
+  MAVEN_OPTS: "-Dmaven.repo.local=/builds/${CI_PROJECT_PATH}/.m2/repository"
 
 cache:
   key: m2
   paths:
     - .m2/repository
 
-before_script:
-  # Minimal Maven settings for GitLab Registry auth via CI_JOB_TOKEN
-  - mkdir -p ~/.m2
-  - |
-    cat > ~/.m2/settings.xml <<'XML'
-    <settings>
-      <servers>
-        <server>
-          <id>gitlab-maven</id>
-          <username>gitlab-ci-token</username>
-          <password>${env.CI_JOB_TOKEN}</password>
-        </server>
-      </servers>
-    </settings>
-    XML
+# Auth for GitLab Maven Registry using CI_JOB_TOKEN
+.before_maven: &before_maven
+  before_script:
+    - mkdir -p ~/.m2
+    - |
+      cat > ~/.m2/settings.xml <<'XML'
+      <settings>
+        <servers>
+          <server>
+            <!-- Must match the <id> in distributionManagement -->
+            <id>gitlab-maven</id>
+            <username>gitlab-ci-token</username>
+            <password>${CI_JOB_TOKEN}</password>
+          </server>
+        </servers>
+      </settings>
+      XML
 
 build:
   stage: build
+  <<: *before_maven
   script:
     - mvn $MAVEN_CLI_OPTS clean package
+  artifacts:
+    when: always
+    paths:
+      - target/
+    expire_in: 1 week
 
 publish:
   stage: publish
-  # Typically publish only from default branch and tags (versioned releases)
+  needs: ["build"]
   rules:
-    - if: '$CI_COMMIT_TAG'        # publish on tags
-    - if: '$CI_COMMIT_BRANCH == "main"'  # and/or default branch if you want SNAPSHOTs
+    # publish on tags (recommended); optionally allow main for SNAPSHOTs
+    - if: '$CI_COMMIT_TAG'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  <<: *before_maven
   script:
-    - mvn $MAVEN_CLI_OPTS deploy
+    - mvn -B deploy
