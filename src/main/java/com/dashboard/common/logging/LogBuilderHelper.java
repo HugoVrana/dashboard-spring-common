@@ -79,6 +79,7 @@ public class LogBuilderHelper {
                 .fullUrl(getFullUrl(request))
                 .statusCode(statusCode)
                 .statusMessage(getStatusMessage(statusCode))
+                .stackTrace(getStackTrace(request.getAttribute("exception") != null ? (Exception) request.getAttribute("exception") : new Exception()))
                 .clientIp(getClientIp(request))
                 .userAgent(request.getHeader("User-Agent"))
                 .durationMs(durationMs)

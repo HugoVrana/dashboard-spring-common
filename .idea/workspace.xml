@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="this uses the version from pom. don't complicate it">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dashboard/common/logging/LogBuilderHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/logging/LogBuilderHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +161,7 @@
       <updated>1762187493458</updated>
       <workItem from="1762187494691" duration="319000" />
       <workItem from="1762187821852" duration="4824000" />
-      <workItem from="1762413396859" duration="19323000" />
+      <workItem from="1762413396859" duration="19737000" />
     </task>
     <task id="LOCAL-00001" summary="aaaa">
       <option name="closed" value="true" />
@@ -292,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762447025833</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="this uses the version from pom. don't complicate it">
+      <option name="closed" value="true" />
+      <created>1762448069002</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762448069002</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +329,8 @@
     <MESSAGE value="grafana client is in" />
     <MESSAGE value="this should make a preview build?" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="this uses the version from pom. don't complicate it" />
+    <option name="LAST_COMMIT_MESSAGE" value="this uses the version from pom. don't complicate it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
