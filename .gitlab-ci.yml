@@ -4,7 +4,7 @@ stages:
 
 build:
   stage: build
-  image: maven:3.8-openjdk-17
+  image: maven:3.9.6-eclipse-temurin-21
   script:
     - mvn clean package
   artifacts:
@@ -13,7 +13,7 @@ build:
 
 deploy:
   stage: deploy
-  image: maven:3.8-openjdk-17
+  image: maven:3.9.6-eclipse-temurin-21
   script:
     - mvn deploy -s ci_settings.xml
   only:
