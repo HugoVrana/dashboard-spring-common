@@ -6,7 +6,7 @@
 
     <groupId>com.dashboard</groupId>
     <artifactId>common</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <packaging>jar</packaging>
 
     <name>dashboard_common</name>
@@ -58,6 +58,11 @@
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <distributionManagement>

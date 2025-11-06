@@ -1,5 +1,7 @@
-com\dashboard\common\logging\GrafanaHttpClient.class
+com\dashboard\common\config\HttpConfig.class
 com\dashboard\common\logging\LogBuilderHelper.class
 com\dashboard\common\model\log\ApiCallLog$ApiCallLogBuilder.class
+com\dashboard\common\config\CommonConfig.class
 com\dashboard\common\environment\GrafanaProperties.class
+com\dashboard\common\logging\GrafanaHttpClient.class
 com\dashboard\common\model\log\ApiCallLog.class
