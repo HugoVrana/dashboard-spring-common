@@ -4,8 +4,6 @@ stages:
 
 variables:
   MAVEN_CLI_OPTS: "-B -V -DskipTests"
-  # make a unique, sortable preview version per MR
-  PREVIEW_VERSION: "${CI_COMMIT_REF_SLUG}-mr${CI_MERGE_REQUEST_IID}-${CI_PIPELINE_ID}-SNAPSHOT"
 
 build:
   stage: build
@@ -28,9 +26,6 @@ deploy_preview:
     # run only for merge request pipelines
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
   script:
-    # Set a unique preview version without writing backup POMs
-    - mvn -q versions:set -DnewVersion="${PREVIEW_VERSION}" -DgenerateBackupPoms=false
-    # Deploy to the GitLab Maven registry using the Job Token (no PAT needed)
     - >
       mvn $MAVEN_CLI_OPTS
       -s ci_settings.xml
