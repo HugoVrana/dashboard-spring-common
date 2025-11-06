@@ -1,1 +1,4 @@
-C:\Users\Hugo\IdeaProjects\spring-dashboard-common\src\main\java\com\dashboard\GetString.java
+C:\Users\Hugo\IdeaProjects\spring-dashboard-common\src\main\java\com\dashboard\common\environment\GrafanaProperties.java
+C:\Users\Hugo\IdeaProjects\spring-dashboard-common\src\main\java\com\dashboard\common\logging\GrafanaHttpClient.java
+C:\Users\Hugo\IdeaProjects\spring-dashboard-common\src\main\java\com\dashboard\common\logging\LogBuilderHelper.java
+C:\Users\Hugo\IdeaProjects\spring-dashboard-common\src\main\java\com\dashboard\common\model\log\ApiCallLog.java
