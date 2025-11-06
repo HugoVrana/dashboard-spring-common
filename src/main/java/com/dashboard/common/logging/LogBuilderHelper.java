@@ -7,7 +7,6 @@ import java.util.UUID;
 
 public class LogBuilderHelper {
 
-
     public static String getStackTrace(Exception ex) {
         StringBuilder sb = new StringBuilder();
         sb.append(ex.toString()).append("\n");

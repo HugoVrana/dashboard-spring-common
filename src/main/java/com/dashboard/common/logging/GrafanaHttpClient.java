@@ -3,6 +3,7 @@ package com.dashboard.common.logging;
 import com.dashboard.common.environment.GrafanaProperties;
 import com.dashboard.common.model.log.ApiCallLog;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -14,13 +15,10 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@RequiredArgsConstructor
 public class GrafanaHttpClient {
 
     private final GrafanaProperties environment;
-
-    public GrafanaHttpClient(GrafanaProperties environment) {
-        this.environment = environment;
-    }
 
     public void send(ApiCallLog apiCallLog) {
         try {
