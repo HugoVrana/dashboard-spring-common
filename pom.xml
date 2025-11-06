@@ -6,25 +6,36 @@
 
     <groupId>com.dashboard</groupId>
     <artifactId>common</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>dashboard_common</name>
+    <description>Dashboard features shared across all APIs</description>
 
     <properties>
         <maven.compiler.source>24</maven.compiler.source>
         <maven.compiler.target>24</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <!--suppress UnresolvedMavenProperty, UnresolvedMavenProperty -->
+            <version>3.5.7</version>
+            <scope>provided</scope> <!-- If the consuming apps already have Spring Boot -->
+        </dependency>
+    </dependencies>
     <distributionManagement>
         <repository>
             <id>gitlab-maven</id>
             <!--suppress UnresolvedMavenProperty -->
-            <url>${env.CI_API_V4_URL}/projects/${env.CI_PROJECT_ID}/packages/maven</url>
+            <url>${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/maven</url>
         </repository>
         <snapshotRepository>
             <id>gitlab-maven</id>
             <!--suppress UnresolvedMavenProperty -->
-            <url>${env.CI_API_V4_URL}/projects/${env.CI_PROJECT_ID}/packages/maven</url>
+            <url>${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/maven</url>
         </snapshotRepository>
     </distributionManagement>
-
 </project>
