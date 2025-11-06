@@ -2,6 +2,11 @@ stages:
   - build
   - deploy
 
+variables:
+  MAVEN_CLI_OPTS: "-B -V -DskipTests"
+  # make a unique, sortable preview version per MR
+  PREVIEW_VERSION: "${CI_COMMIT_REF_SLUG}-mr${CI_MERGE_REQUEST_IID}-${CI_PIPELINE_ID}-SNAPSHOT"
+
 build:
   stage: build
   image: maven:3.9.6-eclipse-temurin-21
@@ -11,11 +16,31 @@ build:
     paths:
       - target/*.jar
 
-deploy:
+deploy_preview:
   stage: deploy
   image: maven:3.9.6-eclipse-temurin-21
+  needs: ["build"]
+  rules:
+    # run only for merge request pipelines
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
   script:
-    - mvn deploy -s ci_settings.xml
-  only:
-    - main
-    - tags
+    # Set a unique preview version without writing backup POMs
+    - mvn -q versions:set -DnewVersion="${PREVIEW_VERSION}" -DgenerateBackupPoms=false
+    # Deploy to the GitLab Maven registry using the Job Token (no PAT needed)
+    - >
+      mvn $MAVEN_CLI_OPTS
+      -s ci_settings.xml
+      deploy
+      -DaltDeploymentRepository=gitlab-maven::default::${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/maven
+
+deploy_release:
+  stage: deploy
+  image: maven:3.9.6-eclipse-temurin-21
+  needs: ["build"]
+  rules:
+    # tags → release
+    - if: '$CI_COMMIT_TAG'
+    # main → release (optional; keep if you publish from main)
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  script:
+    - mvn $MAVEN_CLI_OPTS -s ci_settings.xml deploy
