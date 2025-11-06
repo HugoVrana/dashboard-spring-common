@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="updated docker image">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/environment/GrafanaProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/logging/GrafanaHttpClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/logging/LogBuilderHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/model/log/ApiCallLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="first refactoring of the logger">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dashboard/GetString.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +156,7 @@
       <updated>1762187493458</updated>
       <workItem from="1762187494691" duration="319000" />
       <workItem from="1762187821852" duration="4824000" />
-      <workItem from="1762413396859" duration="7779000" />
+      <workItem from="1762413396859" duration="8015000" />
     </task>
     <task id="LOCAL-00001" summary="aaaa">
       <option name="closed" value="true" />
@@ -245,7 +238,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762415652615</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="first refactoring of the logger">
+      <option name="closed" value="true" />
+      <created>1762423679335</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1762423679335</updated>
+    </task>
+    <task id="LOCAL-00012" summary="first refactoring of the logger">
+      <option name="closed" value="true" />
+      <created>1762423714479</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1762423714479</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +279,8 @@
     <MESSAGE value="the target is correct now for all APIs" />
     <MESSAGE value="append gitignore" />
     <MESSAGE value="updated docker image" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated docker image" />
+    <MESSAGE value="first refactoring of the logger" />
+    <option name="LAST_COMMIT_MESSAGE" value="first refactoring of the logger" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
