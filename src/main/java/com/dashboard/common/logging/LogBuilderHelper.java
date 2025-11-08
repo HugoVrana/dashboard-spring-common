@@ -7,7 +7,6 @@ import java.util.UUID;
 
 public class LogBuilderHelper {
 
-
     public static String getStackTrace(Exception ex) {
         StringBuilder sb = new StringBuilder();
         sb.append(ex.toString()).append("\n");
@@ -72,7 +71,9 @@ public class LogBuilderHelper {
                                                             Integer statusCode,
                                                             Instant timestamp,
                                                             Long durationMs) {
-        return ApiCallLog.builder()
+
+        Exception exception = (Exception) request.getAttribute("exception");
+        ApiCallLog.ApiCallLogBuilder builder = ApiCallLog.builder()
                 .requestId(getOrCreateRequestId(request))
                 .timestamp(timestamp)
                 .method(request.getMethod())
@@ -80,11 +81,19 @@ public class LogBuilderHelper {
                 .fullUrl(getFullUrl(request))
                 .statusCode(statusCode)
                 .statusMessage(getStatusMessage(statusCode))
+                .level(getStatusMessage(statusCode))
                 .clientIp(getClientIp(request))
                 .userAgent(request.getHeader("User-Agent"))
                 .durationMs(durationMs)
                 .service(serviceName)
                 .environment(System.getProperty("spring.profiles.active", "dev"))
                 .version("1.0.0");
+
+        // Only add stack trace if there's an exception
+        if (exception != null) {
+            builder.stackTrace(getStackTrace(exception));
+        }
+
+        return builder;
     }
 }

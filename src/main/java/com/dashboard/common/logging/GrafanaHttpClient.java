@@ -3,7 +3,7 @@ package com.dashboard.common.logging;
 import com.dashboard.common.environment.GrafanaProperties;
 import com.dashboard.common.model.log.ApiCallLog;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.stereotype.Service;
+import lombok.RequiredArgsConstructor;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -13,14 +13,11 @@ import java.time.Instant;
 import java.util.List;
 import java.util.Map;
 
-@Service
+@RequiredArgsConstructor
 public class GrafanaHttpClient {
 
-    private final GrafanaProperties environment;
-
-    public GrafanaHttpClient(GrafanaProperties environment) {
-        this.environment = environment;
-    }
+    private final GrafanaProperties properties;
+    private final HttpClient httpClient;
 
     public void send(ApiCallLog apiCallLog) {
         try {
@@ -44,15 +41,15 @@ public class GrafanaHttpClient {
             );
             String body = mapper.writeValueAsString(payload);
             System.out.println("Sending to Grafana: " + body);
-            HttpClient client = HttpClient.newHttpClient();
+
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(environment.getUrl()))
+                    .uri(URI.create(properties.getUrl()))
                     .header("Content-Type", "application/json")
-                    .header("Authorization", "Bearer " + environment.getApiKey())
+                    .header("Authorization", "Bearer " + properties.getApiKey())
                     .POST(HttpRequest.BodyPublishers.ofString(body, StandardCharsets.UTF_8))
                     .build();
 
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println("Response code: " + response.statusCode());
             System.out.println("Response body: " + response.body());
         }
