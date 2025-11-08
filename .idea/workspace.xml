@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="one day i will get it">
+    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="lets not deploy previews">
       <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ci_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ci_settings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762453251269</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="lets not deploy previews">
+      <option name="closed" value="true" />
+      <created>1762602159727</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1762602159727</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +397,8 @@
     <MESSAGE value="one more thing" />
     <MESSAGE value="new version" />
     <MESSAGE value="one day i will get it" />
-    <option name="LAST_COMMIT_MESSAGE" value="one day i will get it" />
+    <MESSAGE value="lets not deploy previews" />
+    <option name="LAST_COMMIT_MESSAGE" value="lets not deploy previews" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

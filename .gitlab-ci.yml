@@ -42,4 +42,9 @@ deploy_release:
     # main → release (optional; keep if you publish from main)
     - if: '$CI_COMMIT_BRANCH == "main"'
   script:
+    - echo "CI_API_V4_URL=${CI_API_V4_URL}"
+    - echo "CI_PROJECT_ID=${CI_PROJECT_ID}"
+    - test -n "${CI_JOB_TOKEN}" && echo "CI_JOB_TOKEN present" || echo "CI_JOB_TOKEN missing"
+
+    - mvn -s ci_settings.xml -X help:effective-settings | sed -n '/<servers>/,/<\/servers>/p'
     - mvn $MAVEN_CLI_OPTS -s ci_settings.xml deploy
