@@ -18,20 +18,6 @@ build:
     paths:
       - target/*.jar
 
-deploy_preview:
-  stage: deploy
-  image: maven:3.9.6-eclipse-temurin-21
-  needs: ["build"]
-  rules:
-    # run only for merge request pipelines
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-  script:
-    - >
-      mvn $MAVEN_CLI_OPTS
-      -s ci_settings.xml
-      deploy
-      -DaltDeploymentRepository=gitlab-maven::default::${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/maven
-
 deploy_release:
   stage: deploy
   image: maven:3.9.6-eclipse-temurin-21

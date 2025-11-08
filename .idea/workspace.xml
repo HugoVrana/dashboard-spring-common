@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="first refactoring of the logger">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/model/exception/InvalidRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/model/exception/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/model/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ci_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="exceptions">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762423714479</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="exceptions">
+      <option name="closed" value="true" />
+      <created>1762601629799</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1762601629799</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +294,8 @@
     <MESSAGE value="append gitignore" />
     <MESSAGE value="updated docker image" />
     <MESSAGE value="first refactoring of the logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="first refactoring of the logger" />
+    <MESSAGE value="exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="exceptions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
