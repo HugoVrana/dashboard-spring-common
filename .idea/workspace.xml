@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="lets not deploy previews">
+    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="interceptor">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/logging/Interceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ci_settings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "!4 on 4-add-api-logging-interceptor-common-logic",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/Hugo/IdeaProjects/shop-app/backend",
     "node.js.detected.package.eslint": "true",
@@ -96,7 +96,7 @@
       <recent name="C:\Users\Hugo\IdeaProjects\spring-dashboard-common" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GrafanaHttpClientTest">
+  <component name="RunManager" selected="Maven.common">
     <configuration name="GrafanaHttpClientTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GrafanaHttpClientTest" />
       <module name="spring_dashboard_common" />
@@ -178,6 +178,7 @@
       <workItem from="1762187821852" duration="4824000" />
       <workItem from="1762413396859" duration="24066000" />
       <workItem from="1762455398972" duration="3180000" />
+      <workItem from="1762759677215" duration="1864000" />
     </task>
     <task id="LOCAL-00001" summary="aaaa">
       <option name="closed" value="true" />
@@ -363,7 +364,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762602159727</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="lets not deploy previews">
+      <option name="closed" value="true" />
+      <created>1762602389457</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1762602389457</updated>
+    </task>
+    <task id="LOCAL-00025" summary="??">
+      <option name="closed" value="true" />
+      <created>1762602964105</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1762602964105</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +415,9 @@
     <MESSAGE value="new version" />
     <MESSAGE value="one day i will get it" />
     <MESSAGE value="lets not deploy previews" />
-    <option name="LAST_COMMIT_MESSAGE" value="lets not deploy previews" />
+    <MESSAGE value="??" />
+    <MESSAGE value="interceptor" />
+    <option name="LAST_COMMIT_MESSAGE" value="interceptor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
