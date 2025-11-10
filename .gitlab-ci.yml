@@ -1,5 +1,6 @@
 stages:
   - build
+  - deploy_preview
   - deploy
 
 variables:
