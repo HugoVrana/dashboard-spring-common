@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="lets not deploy previews">
+    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="0.0.9 version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dashboard/common/logging/Interceptor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dashboard/common/logging/LogBuilderHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/logging/LogBuilderHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -364,7 +363,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762602159727</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="0.0.9 version">
+      <option name="closed" value="true" />
+      <created>1762766249265</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1762766249265</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +406,8 @@
     <MESSAGE value="new version" />
     <MESSAGE value="one day i will get it" />
     <MESSAGE value="lets not deploy previews" />
-    <option name="LAST_COMMIT_MESSAGE" value="lets not deploy previews" />
+    <MESSAGE value="0.0.9 version" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.9 version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
