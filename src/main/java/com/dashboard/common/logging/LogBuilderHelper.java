@@ -153,8 +153,11 @@ public class LogBuilderHelper {
                                                             HttpServletResponse response,
                                                             Instant timestamp,
                                                             Long durationMs) {
+        Integer statusCode = -1;
+        if (response != null){
+            statusCode = response.getStatus();
+        }
 
-        Integer statusCode = response.getStatus();
         Exception exception = (Exception) request.getAttribute("exception");
         ApiCallLog.ApiCallLogBuilder builder = ApiCallLog.builder()
                 .requestId(getOrCreateRequestId(request))
