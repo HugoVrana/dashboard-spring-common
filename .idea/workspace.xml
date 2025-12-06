@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="0.0.10 version">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="new version">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +67,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "!5 on 5-refactor-audit-class-to-common",
+    "git-widget-placeholder": "!6 on 6-need-to-actually-add-the-audit-class",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/Hugo/IdeaProjects/shop-app/backend",
     "node.js.detected.package.eslint": "true",
@@ -154,6 +153,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GrafanaHttpClientTest" />
         <item itemvalue="Application.GrafanaHttpClientTest" />
       </list>
     </recent_temporary>
@@ -389,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762774841032</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="new version">
+      <option name="closed" value="true" />
+      <created>1765062339903</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1765062339903</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,12 +429,12 @@
     <MESSAGE value="update" />
     <MESSAGE value="this uses the version from pom. don't complicate it" />
     <MESSAGE value="one more thing" />
-    <MESSAGE value="new version" />
     <MESSAGE value="one day i will get it" />
     <MESSAGE value="lets not deploy previews" />
     <MESSAGE value="0.0.9 version" />
     <MESSAGE value="0.0.10 version" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.10 version" />
+    <MESSAGE value="new version" />
+    <option name="LAST_COMMIT_MESSAGE" value="new version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
