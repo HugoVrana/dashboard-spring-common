@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="preview version">
+    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="created a gh pipeline">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/utility/diff/DiffComparer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,15 +16,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="10-add-new-websocket-even-model" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +45,9 @@
     &quot;second&quot;: &quot;f1c9954e-ac44-4a1f-aed9-bfe70da0b2d5&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="c1be350b-86e6-45c7-b6cc-df8526acceee" />
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -63,6 +66,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.GrafanaHttpClientTest.executor": "Run",
+    "JUnit.DiffComparerTest.executor": "Run",
+    "JUnit.DiffComparerTest.testSimpleFieldDifferences.executor": "Debug",
     "Maven.common.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -71,7 +76,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "11-diff-function-that-would-compare-two-objects",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "kronk.content.tree.expanded.paths": "",
@@ -100,10 +105,41 @@
       <recent name="C:\Users\Hugo\IdeaProjects\spring-dashboard-common" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GrafanaHttpClientTest">
+  <component name="RunManager" selected="JUnit.DiffComparerTest.testSimpleFieldDifferences">
     <configuration name="GrafanaHttpClientTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GrafanaHttpClientTest" />
       <module name="spring_dashboard_common" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiffComparerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dashboard.common.utility.diff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dashboard.common.utility.diff" />
+      <option name="MAIN_CLASS_NAME" value="com.dashboard.common.utility.diff.DiffComparerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiffComparerTest.testSimpleFieldDifferences" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dashboard.common.utility.diff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dashboard.common.utility.diff" />
+      <option name="MAIN_CLASS_NAME" value="com.dashboard.common.utility.diff.DiffComparerTest" />
+      <option name="METHOD_NAME" value="testSimpleFieldDifferences" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,6 +195,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DiffComparerTest.testSimpleFieldDifferences" />
+        <item itemvalue="JUnit.DiffComparerTest" />
         <item itemvalue="Application.GrafanaHttpClientTest" />
       </list>
     </recent_temporary>
@@ -166,8 +204,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
       </set>
     </attachedChunks>
   </component>
@@ -186,7 +224,15 @@
       <workItem from="1764873828481" duration="1497000" />
       <workItem from="1765057213204" duration="2748000" />
       <workItem from="1771933063825" duration="2000" />
-      <workItem from="1771964576964" duration="382000" />
+      <workItem from="1771964576964" duration="1241000" />
+      <workItem from="1772004178115" duration="25000" />
+      <workItem from="1772045181161" duration="622000" />
+      <workItem from="1772089574643" duration="1214000" />
+      <workItem from="1772131006328" duration="598000" />
+      <workItem from="1772199058907" duration="598000" />
+      <workItem from="1772275747065" duration="1412000" />
+      <workItem from="1772304674182" duration="598000" />
+      <workItem from="1773063691240" duration="2629000" />
     </task>
     <task id="LOCAL-00001" summary="aaaa">
       <option name="closed" value="true" />
@@ -396,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762774841032</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="created a gh pipeline">
+      <option name="closed" value="true" />
+      <created>1771964988974</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1771964988975</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +488,8 @@
     <MESSAGE value="0.0.9 version" />
     <MESSAGE value="0.0.10 version" />
     <MESSAGE value="preview version" />
-    <option name="LAST_COMMIT_MESSAGE" value="preview version" />
+    <MESSAGE value="created a gh pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a gh pipeline" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
