@@ -49,14 +49,36 @@ public class DiffResult {
         for (DiffEntry entry : entries) {
             ObjectNode entryNode = entriesArray.addObject();
             entryNode.put("fieldPath", entry.getFieldPath());
-            entryNode.putPOJO("oldValue", entry.getOldValue());
-            entryNode.putPOJO("newValue", entry.getNewValue());
+            putValue(entryNode, "oldValue", entry.getOldValue());
+            putValue(entryNode, "newValue", entry.getNewValue());
         }
 
         try {
             return MAPPER.writeValueAsString(root);
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Failed to serialize diff to JSON", e);
+        }
+    }
+
+    private void putValue(ObjectNode node, String fieldName, Object value) {
+        if (value == null) {
+            node.putNull(fieldName);
+        } else if (isObjectId(value)) {
+            node.put(fieldName, toHexString(value));
+        } else {
+            node.putPOJO(fieldName, value);
+        }
+    }
+
+    private boolean isObjectId(Object value) {
+        return value.getClass().getName().equals("org.bson.types.ObjectId");
+    }
+
+    private String toHexString(Object objectId) {
+        try {
+            return (String) objectId.getClass().getMethod("toHexString").invoke(objectId);
+        } catch (Exception e) {
+            return objectId.toString();
         }
     }
 
