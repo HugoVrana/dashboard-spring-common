@@ -66,7 +66,7 @@ public class DiffResult {
         } else if (isObjectId(value)) {
             node.put(fieldName, toHexString(value));
         } else {
-            node.putPOJO(fieldName, value);
+            node.set(fieldName, MAPPER.valueToTree(value));
         }
     }
 
