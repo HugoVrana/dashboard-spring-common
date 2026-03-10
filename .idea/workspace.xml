@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="v17 full release">
+    <list default="true" id="75a0298b-7d90-461c-9271-0c76770c02cf" name="Changes" comment="v18">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dashboard/common/utility/diff/DiffComparer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dashboard/common/utility/diff/DiffComparer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="13-fix-the-tojson-method" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,6 +66,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.GrafanaHttpClientTest.executor": "Run",
+    "JUnit.DiffComparerTest.executor": "Run",
     "Maven.common.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -75,7 +75,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "16-circular-dependency-bug",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "kronk.content.tree.expanded.paths": "",
@@ -104,10 +104,40 @@
       <recent name="C:\Users\Hugo\IdeaProjects\spring-dashboard-common" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GrafanaHttpClientTest">
+  <component name="RunManager" selected="JUnit.DiffResultTest">
     <configuration name="GrafanaHttpClientTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GrafanaHttpClientTest" />
       <module name="spring_dashboard_common" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiffComparerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dashboard.common.utility.diff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dashboard.common.utility.diff" />
+      <option name="MAIN_CLASS_NAME" value="com.dashboard.common.utility.diff.DiffComparerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiffResultTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dashboard.common.utility.diff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dashboard.common.utility.diff" />
+      <option name="MAIN_CLASS_NAME" value="com.dashboard.common.utility.diff.DiffResultTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,6 +193,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DiffResultTest" />
+        <item itemvalue="JUnit.DiffComparerTest" />
         <item itemvalue="Application.GrafanaHttpClientTest" />
       </list>
     </recent_temporary>
@@ -433,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773135515668</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="v18">
+      <option name="closed" value="true" />
+      <created>1773136261687</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1773136261687</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +515,8 @@
     <MESSAGE value="fixed versioning" />
     <MESSAGE value="date fix" />
     <MESSAGE value="v17 full release" />
-    <option name="LAST_COMMIT_MESSAGE" value="v17 full release" />
+    <MESSAGE value="v18" />
+    <option name="LAST_COMMIT_MESSAGE" value="v18" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
