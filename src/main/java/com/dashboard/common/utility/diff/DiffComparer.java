@@ -95,7 +95,12 @@ public class DiffComparer<T> {
                     continue;
                 }
 
-                field.setAccessible(true);
+                try {
+                    field.setAccessible(true);
+                } catch (Exception e) {
+                    // Skip fields that cannot be made accessible
+                    continue;
+                }
 
                 try {
                     Object oldFieldValue = field.get(oldObj);
@@ -128,7 +133,7 @@ public class DiffComparer<T> {
                         compareObjects(oldFieldValue, newFieldValue, fieldPath, result);
                     }
                 } catch (IllegalAccessException e) {
-                    throw new RuntimeException("Unable to access field: " + field.getName(), e);
+                    // Skip inaccessible fields
                 }
             }
 
