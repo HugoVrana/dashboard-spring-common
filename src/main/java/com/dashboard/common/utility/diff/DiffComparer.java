@@ -7,6 +7,7 @@ public class DiffComparer<T> {
 
     private final T oldValue;
     private final T currentValue;
+    private final Set<ObjectPair> visited = new HashSet<>();
 
     private static final Set<Class<?>> PRIMITIVE_TYPES = Set.of(
             Boolean.class, Byte.class, Short.class, Integer.class, Long.class,
@@ -66,6 +67,13 @@ public class DiffComparer<T> {
             }
             return;
         }
+
+        // Check for circular reference before recursing into complex objects
+        ObjectPair pair = new ObjectPair(oldObj, newObj);
+        if (visited.contains(pair)) {
+            return;
+        }
+        visited.add(pair);
 
         if (oldObj instanceof Collection && newObj instanceof Collection) {
             compareCollections((Collection<?>) oldObj, (Collection<?>) newObj, pathPrefix, result);
@@ -235,5 +243,33 @@ public class DiffComparer<T> {
 
     private boolean isPrimitiveOrWrapper(Class<?> type) {
         return type.isPrimitive() || PRIMITIVE_TYPES.contains(type);
+    }
+
+    /**
+     * Helper class to track pairs of objects being compared using identity equality.
+     */
+    private static final class ObjectPair {
+        private final Object oldObj;
+        private final Object newObj;
+
+        ObjectPair(Object oldObj, Object newObj) {
+            this.oldObj = oldObj;
+            this.newObj = newObj;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof ObjectPair)) return false;
+            ObjectPair that = (ObjectPair) o;
+            // Use identity comparison (==) instead of equals()
+            return this.oldObj == that.oldObj && this.newObj == that.newObj;
+        }
+
+        @Override
+        public int hashCode() {
+            // Use System.identityHashCode for identity-based hashing
+            return System.identityHashCode(oldObj) ^ System.identityHashCode(newObj);
+        }
     }
 }
