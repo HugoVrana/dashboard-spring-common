@@ -6,7 +6,7 @@
 
     <groupId>com.dashboard</groupId>
     <artifactId>common</artifactId>
-    <version>0.0.19</version>
+    <version>0.0.20</version>
     <packaging>jar</packaging>
 
     <name>dashboard_common</name>
@@ -15,7 +15,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.7</version>
+        <version>4.0.2</version>
         <relativePath/>
     </parent>
 
@@ -26,12 +26,13 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
             <!--suppress UnresolvedMavenProperty, UnresolvedMavenProperty -->
-            <version>3.5.7</version>
+            <version>RELEASE</version>
             <scope>provided</scope> <!-- If the consuming apps already have Spring Boot -->
         </dependency>
         <dependency>
@@ -63,6 +64,10 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
     </dependencies>
     <distributionManagement>
