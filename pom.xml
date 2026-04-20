@@ -6,7 +6,8 @@
 
     <groupId>com.dashboard</groupId>
     <artifactId>common</artifactId>
-    <version>0.0.21-preview</version>
+    <version>0.0.21
+    </version>
     <packaging>jar</packaging>
 
     <name>dashboard_common</name>
